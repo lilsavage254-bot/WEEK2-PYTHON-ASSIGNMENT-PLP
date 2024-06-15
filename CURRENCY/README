@@ -1,0 +1,65 @@
+"""
+Currency Converter Script
+=========================
+
+This script fetches the latest exchange rates from the ExchangeRate-API and performs currency conversion from USD
+to a specified currency. The script runs indefinitely, updating the exchange rates and performing conversions every 
+10 minutes.
+
+Requirements:
+-------------
+- Python 3.x
+- Internet connection to fetch exchange rates
+
+Modules Used:
+-------------
+- urllib.request: For making HTTP requests to fetch exchange rates.
+- json: For parsing JSON data from the API response.
+- time: For implementing delays between successive API requests.
+
+Usage:
+------
+1. Run the script.
+2. Enter the amount in USD you wish to convert.
+3. Enter the target currency code (e.g., EUR, JPY, GBP).
+4. The script will fetch the latest exchange rate, perform the conversion, and display the result.
+5. The process repeats every 10 minutes.
+
+# def currency_converter():
+''' 
+     Defines a function which will be used to convert the give currency.
+
+# data = json.loads(source)
+     It loads the json data from the API given and stores it in a variable named data.
+
+# for currency in data['conversion_rates']:
+            # dict[currency] = data['conversion_rates'][currency]
+       Thisfor loop iterates through the json data and stores the currency with its values in a dictionary.
+
+# try:
+        print(f"1 USD is equal to {dict[target_currency.upper()]} {target_currency.upper()}")
+        print(f"The amount you entered is equal to {amount * dict[target_currency.upper()]} {target_currency.upper()}")
+# except KeyError:
+        print("Please enter a valid currency")
+        exit()
+             Throws an error message when  the user enters a currency which is not available.
+
+# if __name__ == '__main__':
+      # while True:
+      #   currency_converter()
+      #   print("Do you want to convert another currency?(yes/no)")
+      #   response = input('>')
+      #   if response == 'yes':
+      #       break
+
+      #   time_wait = 10
+      #   print(f'Waiting {time_wait} minutes...')
+      #   time.sleep(time_wait * 60)
+
+            Checks if the user wants to perform another conversion.
+            If the user responds with anything other than "yes", waits for 10 minutes before allowing another conversion.
+            If the user responds with "yes", the loop breaks, allowing immediate next conversion.
+
+     
+
+
