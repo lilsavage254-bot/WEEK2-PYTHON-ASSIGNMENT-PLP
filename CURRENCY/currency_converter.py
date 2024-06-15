@@ -10,7 +10,7 @@ print("Enter amount to be converted.....")
 amount = float(input('>'))
 print("Enter the currency you want to convert....")
 target_currency = input('>')
-print("Converting USD to", target_currency.upper)
+print("Converting USD to", target_currency.upper())
 
 def currency_converter():
     
@@ -37,10 +37,12 @@ if __name__ == '__main__':
         currency_converter()
         print("Do you want to convert another currency?(yes/no)")
         response = input('>')
-        if response == 'yes':
-            break
+        if response != 'yes':
+            time_wait = 10
+            print(f'Waiting {time_wait} minutes...')
+            time.sleep(time_wait * 60)
+        else:
+             break
 
-        time_wait = 10
-        print(f'Waiting {time_wait} minutes...')
-        time.sleep(time_wait * 60)
+        
         
