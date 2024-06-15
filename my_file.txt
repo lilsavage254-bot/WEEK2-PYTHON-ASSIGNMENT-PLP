@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 I am a student at Egerton University School
 of Science and Technology
 pursuing a degree in Computer Science
@@ -6,4 +7,14 @@ Semester 1
 I like coding
 I am a programmer
 I am a software developer
+=======
+I am a student at Egerton University School
+of Science and Technology
+pursuing a degree in Computer Science
+Year 1
+Semester 1
+I like coding
+I am a programmer
+I am a software developer
+>>>>>>> e0323a1ddc73c8762807ff50153f36c1a8248443
 I am a web developer
